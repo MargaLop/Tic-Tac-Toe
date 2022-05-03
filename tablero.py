@@ -1,5 +1,4 @@
-from jinja2 import ChoiceLoader
-# from casilla import Casilla
+from casilla import Casilla
 
 
 class Tablero:
@@ -15,12 +14,8 @@ class Tablero:
                 self.casilla.append(Casilla())
     pass
 
-    def dibujaCasilla(self):
-        print(f"""+------+------+------+
-        |  {}  |  {}  |  {}  |
-        +------+------+------+
-        |  {}  |  {}  |  {}  |
-        +------+------+------+
-        |  {}  |  {}  |  {}  |
-        +------+------+------+""")
-
+    def dibuja_casilla(self):
+        return f"""
++-----
+|  {self.lista_i}
+"""
