@@ -1,8 +1,27 @@
+from itertools import product
+
 class Casilla:
-    def __init__(self,jugada):
+    def __init__(self, row, column, jugada='',indice =[],list_r =[],list_c=[]):
+        self.row = row
+        self.column = column
         self.jugada = jugada
+        self.indice = indice
+        self.list_r = list_r
+        self.list_c = list_r
 
-    def guarda_jugada(self,buffer =[]):
-        self.buffer = buffer
-        self.buffer.append(self.jugada)
+    def guarda_jugada(self):
 
+        for r in range(self.row):
+            self.list_r.append(str(r))
+        for c in range(self.column):    
+            self.list_c.append(str(c))
+   
+        for i in product(self.list_r, self.list_c): 
+            self.indice.append(i[0] +','+i[1])
+        
+        
+
+            
+
+
+# tableroo = [False,False,False,False,False,False,False,False,False]
