@@ -1,5 +1,5 @@
 class Jugador:
-    fichas = ["cruz", "raya"]
+    fichas = ["X", "O"]
     inicio = ""
 
     def __init__(self, ficha=False):
@@ -14,3 +14,6 @@ class Jugador:
         contador += 1
         jugada = nueva_lista.append(ficha)
         # when (ficha == [0] and ficha == [0]):
+
+    def __str__(self):
+        return self.ficha

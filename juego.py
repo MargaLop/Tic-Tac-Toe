@@ -16,8 +16,6 @@ class Juego:
         #    - self.ganador()
         #    - O cambiamos jugador activo y repetimos
         #    - O todos los espacios llenos => empate
-
-
         pass
 
     def ganador(self, jugador):
@@ -25,9 +23,10 @@ class Juego:
 
     def reiniciar(self):
         self.jugadores = (Jugador(False), Jugador(True))
-        self.tablero = Tablero()
 
-#reinicio. mira a ver si te interesa.
+        self.tablero = Tablero(3, 3)
+
+        # reinicio. mira a ver si te interesa.
         while True:
             question = input("¿Quieres jugar de nuevo? y or n\n")
             if question == "y":

@@ -17,6 +17,11 @@ class Casilla:
 
     def guarda_jugada(self, owner):
         self.owner = owner
+
+    def __str__(self):
+        # return f"[{self.row}, {self.column}] ññ"
+        return self.owner if self.owner else " "
+
 '''
         for r in range(self.row):
             self.list_r.append(str(r))
