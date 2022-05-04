@@ -11,8 +11,6 @@ class Tablero:
             0, 0, 0
         ]"""
 
-
-
     def __init__(self, rows=3, columns=3):
         self.r = rows
         self.c = columns
@@ -20,7 +18,7 @@ class Tablero:
         contador = 0
         for row in range(self.r):
             for col in range(self.c):
-                contador += 1 
+                contador += 1
                 print(f"--{contador}")
                 self.casillas.append(Casilla(row, col))
 
@@ -32,32 +30,27 @@ class Tablero:
         for row in range(self.r):
             for col in range(self.c):
 
-                contador += 1 
-
-
+                contador += 1
 
                 n = (row * self.c) + col
 
                 #  print(f"row: {row} -- col: {col} --- n: {n}")
                 # print(f"++{contador}")
                 # print(f"{n} of {len(self.casillas)}")
-                
-                
-                print(self.casillas[n])
 
-        
+                print(self.casillas[n])
 
     def dibuja(self):
 
         borde = {
             "updown_last": "+-----+\n",
             "updown": "+-----",
-            "side_last" :"|     |\n",
+            "side_last": "|     |\n",
             "side": "|     "
         }
 
         # Creación de "tejado/techo" y de "suelo" de la fila del tablero.
-        up_down = borde["updown"] * (self.r - 1) + borde["updown_last"] 
+        up_down = borde["updown"] * (self.r - 1) + borde["updown_last"]
 
         # Creación de los lados de la fila del tablero.
         paredes = borde["side"] * (self.r - 1) + borde["side_last"]
@@ -68,6 +61,7 @@ class Tablero:
         tablero = fila + continuacion_fila * (self.c - 1)
 
         return tablero
+
 
 # input_que_poner = [0, len()]
 if __name__ == "__main__":
