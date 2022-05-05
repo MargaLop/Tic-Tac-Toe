@@ -16,6 +16,12 @@ class Casilla:
             else:
                 return False 
 
+    def esta_disponible(self):
+        if self.owner == None:
+            return True
+        else:
+            return False
+
     def __str__(self):
         # return f"[{self.row}, {self.column}] ññ"
         return self.owner if self.owner else " "
