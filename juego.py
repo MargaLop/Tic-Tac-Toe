@@ -21,7 +21,8 @@ class Juego:
         print('Player2', player2)
 
         return(player1, player2)
-    
+
+
     def reset(self):
         self.turno = 0
         self.tablero = Tablero()
@@ -52,3 +53,7 @@ class Juego:
                 print("\n    Gracias por repetir, está claro que te diviertes")
         
 
+# input_que_poner = [0, len()]
+if __name__ == "__main__":
+    juego = Juego()
+    juego.juega()

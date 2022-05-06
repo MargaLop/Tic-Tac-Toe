@@ -24,4 +24,5 @@ class Casilla:
 
     def __str__(self):
         # return f"[{self.row}, {self.column}] ññ"
-        return self.owner if self.owner else " "
+        return self.owner if self.owner else "·"
+

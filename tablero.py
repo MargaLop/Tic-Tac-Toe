@@ -21,31 +21,24 @@ class Tablero:
         for row in range(self.r):
             for col in range(self.c):
                 contador += 1 
-                print(f"--{contador}")
                 self.casillas.append(Casilla(row, col))
 
-        print(f"Tablero cread de {self.r} x {self.c}")
+        print(f"Tablero creado de {self.r} x {self.c}")
+
 
     def dibujar(self):
         contador = 0
-
         for row in range(self.r):
             for col in range(self.c):
-
                 contador += 1 
-
-
-
                 n = (row * self.c) + col
 
-                #  print(f"row: {row} -- col: {col} --- n: {n}")
+                # print(f"row: {row} -- col: {col} --- n: {n}")
                 # print(f"++{contador}")
                 # print(f"{n} of {len(self.casillas)}")
-                
-                
+               
                 print(self.casillas[n])
 
-        
 
     def dibuja(self):
 
@@ -74,3 +67,10 @@ if __name__ == "__main__":
     tablero = Tablero(3, 3)
     tablero.dibujar()
     print(tablero.dibuja())
+
+
+
+    # tablero.dibujar()
+    # tablero = Tablero(3, 3)
+    # tablero.dibujar()
+    # print(tablero.dibuja())
