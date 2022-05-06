@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 '''class Jugador:
     fichas = ["cruz", "raya"]
+=======
+class Jugador:
+    fichas = ["X", "O"]
+>>>>>>> main
     inicio = ""
 
     def __init__(self, ficha=False):
@@ -14,6 +19,7 @@
         contador += 1
         jugada = nueva_lista.append(ficha)
         # when (ficha == [0] and ficha == [0]):
+<<<<<<< HEAD
 '''
 from colorhelper import rojo, verde, azul
 from tablero import Tablero
@@ -125,3 +131,8 @@ class Jugador:
 
 
         tablero.introduce(self, celdaElegida)
+=======
+
+    def __str__(self):
+        return self.ficha
+>>>>>>> main
