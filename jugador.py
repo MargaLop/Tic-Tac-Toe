@@ -15,20 +15,23 @@
         jugada = nueva_lista.append(ficha)
         # when (ficha == [0] and ficha == [0]):
 '''
-
-#from colorhelper import rojo, azul
-
+from colorhelper import rojo, verde, azul
+from tablero import Tablero
 
 class Jugador:
     def __init__(self, token, valor):
         self._token = token
         self.valor = valor
-        #self.color = rojo if self.valor == 1 else azul
+        self.color = rojo if self.valor == 1 else azul
 
     def get_token(self):
+        self.Tablero[row][column] = Jugador
         return self.color(self._token)
 
     def set_token(self, token):
+        player = 'X' if self.get_random_first_player() == 1 else 'O'
+        while True:
+            print(f"Player {player} turn")
         self._token = token
 
     def del_token(self):
@@ -66,5 +69,59 @@ class Jugador:
             casillaElegida = solicitaJugada()
 
         celdaElegida = humanToMachine(casillaElegida)
+
+
+        def is_player_win(self, Jugador):
+            win = None
+
+        n = len(self.board)
+
+        # checking rows
+        for i in range(n):
+            win = True
+            for j in range(n):
+                if self.board[i][j] != Jugador:
+                    win = False
+                    break
+            if win:
+                return win
+
+        # checking columns
+        for i in range(n):
+            win = True
+            for j in range(n):
+                if self.board[j][i] != Jugador:
+                    win = False
+                    break
+            if win:
+                return win
+
+        # checking diagonals
+        win = True
+        for i in range(n):
+            if self.board[i][i] != Jugador:
+                win = False
+                break
+        if win:
+            return win
+
+        win = True
+        for i in range(n):
+            if self.board[i][n - 1 - i] != Jugador:
+                win = False
+                break
+        if win:
+            return win
+        return False
+
+        for row in self.Teclado:
+            for item in row:
+                if item == '-':
+                    return False
+        return True
+
+
+
+
 
         tablero.introduce(self, celdaElegida)
